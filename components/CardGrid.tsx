@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ISchedule } from "../interfaces/Schedule";
 import { IScheduleLog } from "../interfaces/ScheduleLog";
 import Card from "./Card";

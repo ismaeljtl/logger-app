@@ -1,13 +1,7 @@
-// import { IMovieDetails } from "../interfaces/MovieDetails.interface";
-// import { INowPlayingMovie } from "../interfaces/NowPlayingMovies.interface";
+import { IHomeScheduleLogResponse } from "~/interfaces/HomeScheduleLog";
+import { IHomeScheduleResponse } from "~/interfaces/HomeScheduleResponse";
 
-export interface IMovieDetailsResponse {
-  isOk: boolean;
-  data: any | null;
-  error: string | null;
-}
-
-export const getSchedules = async (): Promise<any> => {
+export const getSchedules = async (): Promise<IHomeScheduleResponse> => {
   try {
     if (!process.env.NEXT_PUBLIC_API_URL)
       return {
@@ -32,7 +26,7 @@ export const getSchedules = async (): Promise<any> => {
   }
 };
 
-export const getScheduleLogs = async (): Promise<any> => {
+export const getScheduleLogs = async (): Promise<IHomeScheduleLogResponse> => {
   try {
     if (!process.env.NEXT_PUBLIC_API_URL)
       return {
