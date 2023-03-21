@@ -1,4 +1,5 @@
 Project made by Ismael Teixeira. Know more about me in https://ismaeljtl.com
+
 Demo: https://logger-app-lac.vercel.app/
 
 Project created and made with Next.js.
