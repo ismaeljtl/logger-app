@@ -20,7 +20,7 @@ export default function Home() {
 
   const getInitData = async () => {
     setLoading(true);
-    fetchData();
+    await fetchData();
     setLoading(false);
   };
 
@@ -30,9 +30,9 @@ export default function Home() {
 
   return (
     <>
-      {schedules && schedules.error && <Error errorMsg={schedules.error} />}
       {loading && <LoadingCardGrid numCards={9} />}
-      {schedules && schedules.isOk && logs && logs.isOk && (
+      {schedules.error && <Error errorMsg={schedules.error} />}
+      {schedules.isOk && logs.isOk && (
         <CardGrid
           data={schedules.data}
           logs={logs.data}
